@@ -192,7 +192,6 @@ PRODUCT_PACKAGES += \
     power.msm8952
 
 # Ramdisk
-# Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
     init.mmi.boot.sh \
