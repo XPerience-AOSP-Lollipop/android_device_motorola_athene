@@ -71,7 +71,6 @@ PRODUCT_AAPT_CONFIG := normal
 PRODUCT_PACKAGES += \
     audiod \
     audio.a2dp.default \
-    audio.primary.msm8952 \
     audio.r_submix.default \
     audio.usb.default \
     libaudio-resampler \
@@ -83,6 +82,10 @@ PRODUCT_PACKAGES += \
     libtinycompress \
     libtinyxml \
     tinymix
+
+# Audio
+PRODUCT_PACKAGES += \
+    audio.primary.msm8952
 
 PRODUCT_COPY_FILES +=  \
     $(LOCAL_PATH)/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
@@ -187,6 +190,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     power.msm8952
 
+# Ramdisk
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
