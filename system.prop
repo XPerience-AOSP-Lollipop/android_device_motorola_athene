@@ -268,3 +268,6 @@ ro.config.alarm_alert=Oxygen.ogg
 ro.config.ringtone=Moto.ogg
 ro.config.notification_sound=Moto.ogg
 ro.cutoff_voltage_mv=3200
+
+#Activate burn-in protection
+ro.systemui.burn_in_protection=true
