@@ -59,4 +59,4 @@ if [ -s "$MY_DIR"/../$DEVICE/proprietary-files.txt ]; then
     extract "$MY_DIR"/../$DEVICE/proprietary-files.txt "$SRC"
 fi
 
-"$MY_DIR"/setup-makefiles.sh
+"$MY_DIR"/setup-makefiles.shg
