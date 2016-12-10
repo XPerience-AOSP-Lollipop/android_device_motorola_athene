@@ -19,4 +19,3 @@ Camera  | 16 MP, autofocus, LED flash
 
 Copyright 2016 - The XPerience Project.
 
-![Moto G4 Plus](http://images.fonearena.com/blog/wp-content/uploads/2016/05/Moto-G4-Plus_fonearena-16-1024x742.jpg "Moto G4 Plus")
