@@ -14,5 +14,11 @@
   {
     "repository": "android_device_qcom_common",
     "target_path": "device/qcom/common"
+  },
+    {
+    "remote": "Unicorn",
+    "repository":  "proprietary_vendor_motorola",
+    "target_path": "vendor/motorola",
+    "branch":      "xpe-11.1"
   }
 ]
