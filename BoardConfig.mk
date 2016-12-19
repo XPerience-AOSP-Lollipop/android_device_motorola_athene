@@ -126,6 +126,7 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 TARGET_POWERHAL_VARIANT := qcom
 TARGET_POWERHAL_SET_INTERACTIVE_EXT := $(LOCAL_PATH)/power/power_ext.c
 
+
 # CPU
 ENABLE_CPUSETS := true
 
@@ -134,6 +135,9 @@ TARGET_PROVIDES_LIBLIGHT := true
 
 # Properties
 TARGET_SYSTEM_PROP += device/motorola/athene/system.prop
+
+#Build in adblock
+XPERIENCE_IN_ADBLOCK := true
 
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
