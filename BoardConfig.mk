@@ -179,6 +179,10 @@ TW_DEFAULT_EXTERNAL_STORAGE := true
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TW_THEME := portrait_hdpi
 
+#BOOTANIMATION RELATED
+#athene have 1080 screen
+XPE_WIDTH := 1080
+
 # SDClang
 TARGET_USE_SDCLANG := true
 
