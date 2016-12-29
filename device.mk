@@ -63,9 +63,6 @@ PRODUCT_COPY_FILES += \
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
 
-#TWRP
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/twrp.fstab:recovery/root/etc/twrp.fstab
-
 # Audio
 PRODUCT_PACKAGES += \
     audiod \
