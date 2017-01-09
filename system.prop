@@ -239,6 +239,9 @@ drm.service.enabled=true
 net.tcp.2g_init_rwnd=10
 wifi.interface=wlan0
 
+#NET
+persist.data.netmgrd.qos.enable=false
+
 # Play Store
 ro.com.google.clientidbase=android-motorola
 ro.com.google.clientidbase.ms=android-motorola
