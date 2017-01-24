@@ -7,12 +7,12 @@ on boot
     chmod 0664 /dev/cpuset/camera-daemon/tasks
 
     # update foreground cpuset now that processors are up
-    # reserve CPU 7 for the top app
-    write /dev/cpuset/foreground/cpus 0-6
+    # reserve CPU 4 for the top app
+    write /dev/cpuset/foreground/cpus 0-3,5-7
     write /dev/cpuset/foreground/boost/cpus 0-3
-    write /dev/cpuset/background/cpus 4-6
-    write /dev/cpuset/system-background/cpus 4-6
-    write /dev/cpuset/top-app/cpus 7
+    write /dev/cpuset/background/cpus 4
+    write /dev/cpuset/system-background/cpus 5-7
+    write /dev/cpuset/top-app/cpus 0-7
     write /dev/cpuset/camera-daemon/cpus 4-7
 
     # Enable sched boost
@@ -129,7 +129,7 @@ on enable-low-power
     write /sys/module/cpu_boost/parameters/input_boost_ms 40
 
     # Enable core control
-    write /sys/devices/system/cpu/cpu0/core_ctl/min_cpus 0
+    write /sys/devices/system/cpu/cpu0/core_ctl/min_cpus 2
     write /sys/devices/system/cpu/cpu0/core_ctl/max_cpus 4
     write /sys/devices/system/cpu/cpu0/core_ctl/busy_up_thres 68
     write /sys/devices/system/cpu/cpu0/core_ctl/busy_down_thres 40
