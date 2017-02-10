@@ -111,9 +111,9 @@ PRODUCT_PACKAGES += \
     libbson \
     Snap
 
-# CMActions
+# Rename to moto actions
 PRODUCT_PACKAGES += \
-    CMActions
+    MotoActions
 
 # Display
 PRODUCT_PACKAGES += \
