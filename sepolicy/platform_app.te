@@ -1,3 +1,5 @@
 allow platform_app exfat:dir rw_dir_perms;
 allow platform_app persist_file:dir search;
 allow platform_app sensors_device:chr_file { open read write };
+allow platform_app sudaemon:unix_stream_socket connectto;
+allow platform_app superuser_device:sock_file write;
