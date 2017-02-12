@@ -1,9 +1,7 @@
 [
   {
-    "remote": "github",
     "repository":  "Klozz/athene_kernel_msm8952",
     "target_path": "kernel/motorola/msm8952",
-    "branch":      "cm-14.1"
   },
   {
     "repository": "android_external_bson",
