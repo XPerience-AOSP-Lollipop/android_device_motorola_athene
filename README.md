@@ -17,7 +17,7 @@ Battery | Li-Ion 3000mAh battery
 Display | 1080 x 1920 pixels, 5.5 inches (~401 ppi pixel density)
 Camera  | 16 MP, autofocus, LED flash
 
-![Moto g4 plus](http://cdn1.smart-gsm.com/picture/motorola-moto-g4-plus.jpg "Moto g4/Plus")
+![Moto g4 plus](https://www.att.com.mx/img/equipos/motorola/moto-g-4-plus/main-1.jpg "Moto g4/Plus")
 
 Copyright 2017 - The XPerience Project.
 
