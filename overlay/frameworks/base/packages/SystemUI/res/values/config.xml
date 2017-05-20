@@ -42,4 +42,7 @@
     <!-- Control whether to show VoLTE icon in statusbar when ims is registered.-->
     <bool name="config_showVolteIcon">true</bool>
 
+    <!-- Burn in protection -->
+    <bool name="config_statusBarBurnInProtection">true</bool>
+
 </resources>
