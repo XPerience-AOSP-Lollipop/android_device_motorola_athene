@@ -116,8 +116,8 @@ on enable-low-power
     write /sys/module/lpm_levels/parameters/sleep_disabled 0
 
     # HMP scheduler (big.Little cluster related) settings
-    write /proc/sys/kernel/sched_upmigrate 93
-    write /proc/sys/kernel/sched_downmigrate 83
+    write /proc/sys/kernel/sched_upmigrate 100
+    write /proc/sys/kernel/sched_downmigrate 100
 
     # Enable sched guided freq control
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/use_sched_load 1
@@ -175,5 +175,25 @@ on property:init.svc.recovery=running
     trigger enable-low-power
 
 on property:dev.bootcomplete=1
-    write /sys/block/dm-0/queue/read_ahead_kb 512
-    setprop sys.io.scheduler "cfq"
+    write /dev/kmsg "Boot completed "
+    setprop sys.io.scheduler bfq
+
+    # Enable sched guided freq control
+    write /sys/devices/system/cpu/cpufreq/interactive/use_sched_load 1
+    write /sys/devices/system/cpu/cpufreq/interactive/use_migration_notif 1
+    write /proc/sys/kernel/sched_freq_inc_notify 200000
+    write /proc/sys/kernel/sched_freq_dec_notify 200000
+
+    # spill load is set to 100% by default in the kernel
+    write /proc/sys/kernel/sched_spill_nr_run 3
+
+    #Reset read ahead for dm-1 to 1024KB
+    write /sys/block/dm-1/queue/read_ahead_kb 1024
+    #Reset the "read ahead" setting for system patition
+    # result: ext4: 32KB, dm_verity:64KB, block layer: 1024KB
+    write /sys/fs/ext4/dm-0/inode_readahead_blks 8
+
+    write /sys/block/mmcblk0/bdi/read_ahead_kb 1024
+    write /sys/block/mmcblk0/queue/read_ahead_kb 1024
+    write /sys/block/dm-0/queue/read_ahead_kb 1024
+    write /sys/block/dm-1/queue/read_ahead_kb 1024
