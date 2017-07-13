@@ -58,8 +58,7 @@ PRODUCT_COPY_FILES += \
 
 # Motorola Camera permissions
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/com.motorola.camera.xml:system/etc/permissions/com.motorola.camera.xml \
-    $(LOCAL_PATH)/configs/com.motorola.cameraone.xml:system/etc/permissions/com.motorola.cameraone.xml
+    $(LOCAL_PATH)/configs/com.motorola.camera.xml:system/etc/permissions/com.motorola.camera.xml
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
@@ -105,6 +104,7 @@ PRODUCT_COPY_FILES +=  \
 PRODUCT_PACKAGES += \
     camera.msm8952 \
     libbson \
+    MotCamera \
     Snap
 
 # Rename to moto actions
